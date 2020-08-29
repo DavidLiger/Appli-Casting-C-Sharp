@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Trululu.web.Entities.Casting>
+
+@section title {
+    Liste Casting
+}
+
+<main>
+    <div class="container">
+        <h2 class="title-centered">Liste des castings</h2>
+        <div class="castings">
+            @foreach (var casting in @Model)
+            {
+                <div class="casting">
+                    <h4>@casting.Wording</h4>
+                    <p>@casting.DescriptionPost</p>
+                    <div class="casting-links">
+                        <a asp-controller="Casting" asp-action="Details" asp-route-id="@casting.Id" class="link-see"><i class="far fa-eye"></i></a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</main>
+
+

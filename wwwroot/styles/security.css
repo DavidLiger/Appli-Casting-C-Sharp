@@ -1,0 +1,115 @@
+﻿body {
+    background: linear-gradient(to right, #273c75, #40739e);
+}
+
+.box-form {
+    width: 25%;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding: 50px 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-form h2 {
+    font-size: 20px;
+    margin: 30px 0 50px 20px;
+    letter-spacing: 0.8px;
+    font-variant: all-small-caps;
+}
+
+.box-form input, .box-form textarea {
+    background-color: #FAFAFA;
+    border: none;
+    width: 100%;
+    resize: none;
+}
+
+.box-form .box-icon-input {
+    display: flex;
+    align-items: stretch;
+    height: 50px;
+    border-bottom: 2px solid #F1F1F1;
+}
+
+.box-form .box-top input, .box-form .box-top textarea {
+    border-top: 2px solid #F1F1F1;
+}
+
+.box-form .box-top .icon-input {
+    border-top: 2px solid #F1F1F1;
+}
+
+.icon-input {
+    background-color: #FAFAFA;
+    height: 50px;
+    width: 50px;
+    border-bottom: 2px solid #F1F1F1;
+    padding: 10px
+}
+
+.form-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 10px;
+}
+
+.form-submit input {
+    color: #40739e;
+    width: 40%;
+    border: 1px solid #40739e;
+    background-color: white;
+    border-radius: 100px;
+    padding: 3px;
+}
+
+.form-submit input:hover {
+    background-color: white;
+    color: #40739e;
+    border-color: #40739e; 
+}
+
+.form-submit .forgot-password {
+    font-size: 12px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.small {
+    font-size: 12px;
+    text-align: center;
+}
+
+.link-in-text {
+    font-variant: normal;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    color: #40739e !important;
+    transition: 0.4s ease-in-out;
+}
+
+.link-in-text:hover {
+    color: #273c75 !important;
+}
+
+.box-large {
+    width: 70%;
+}
+
+.align-center {
+    justify-content: space-around;
+}
+
+.box-form .row {
+    margin-bottom: 15px;
+}

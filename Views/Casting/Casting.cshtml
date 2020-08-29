@@ -1,0 +1,29 @@
+﻿@model Trululu.web.Entities.Casting
+
+@section title {
+    Casting - @Model.Wording
+}
+
+<main>
+    <div class="container">
+        <div class="casting-detail">
+            <h3>@Model.Wording</h3>
+            <div class="casting-info">
+                <div class="casting-column">
+                    <p>Age minimum : @Model.AgeMin</p>
+                </div>
+                <div class="casting-column">
+                    <p>Age maximum : @Model.AgeMax</p>
+                </div>
+            </div>
+            <div class="casting-text">
+                <h5>Description du poste</h5>
+                <p>@Model.DescriptionPost</p>
+                <h5>Description du profil</h5>
+                <p>@Model.DescriptionProfile</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+

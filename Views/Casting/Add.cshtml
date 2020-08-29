@@ -1,0 +1,67 @@
+﻿@model Trululu.web.ViewModels.CastingViewModel
+
+@section title {
+    Ajouter un casting
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/styles/security.css" />
+}
+
+<main>
+    <div class="box-form box-large">
+        <h2>Ajout d'un casting</h2>
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container-fluid">
+                <div class="row not-gutters">
+                    <div class="col-md-8">
+                        <div class="box-icon-input box-top">
+                            <div class="icon-input"><i class="fas fa-tag"></i></div>
+                            <input asp-for="Libelle" placeholder="Titre" />
+                            <span asp-validation-for="Libelle" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="box-icon-input box-top">
+                            <div class="icon-input"><i class="fas fa-minus"></i></div>
+                            <input asp-for="AgeMin" placeholder="Age minimum" />
+                            <span asp-validation-for="AgeMin" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="box-icon-input box-top">
+                            <div class="icon-input"><i class="fas fa-plus"></i></div>
+                            <input asp-for="AgeMax" placeholder="Age maximum" type="number" />
+                            <span asp-validation-for="AgeMax" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-icon-input box-top">
+                            <div class="icon-input"><i class="fas fa-user"></i></div>
+                            <textarea asp-for="DescriptionProfil" placeholder="Description du profil" rows="3"></textarea>
+                            <span asp-validation-for="DescriptionProfil" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-icon-input box-top">
+                            <div class="icon-input"><i class="fas fa-briefcase"></i></div>
+                            <textarea asp-for="DescriptionPoste" placeholder="Description du poste" rows="3"></textarea>
+                            <span asp-validation-for="DescriptionPoste" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-submit align-center">
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</main>

@@ -1,0 +1,64 @@
+﻿@model Trululu.web.ViewModels.ProfileViewModel
+
+@section title {
+    Mon compte
+}
+
+<main>
+    <div class="container">
+        <div class="content-profile">
+            <div class="header-profile">
+                <div class="row">
+                    <div class="col-4">
+                        <p><i class="fas fa-id-card"></i> @Model.user.FisrtName @Model.user.Name</p>
+                    </div>
+                    <div class="col-4 text--center">
+                        <p><i class="fas fa-at"></i> @Model.user.Mail</p>
+                    </div>
+                    <div class="col-4 text--right">
+                        <p><i class="fas fa-birthday-cake"></i> @Model.user.DateOfBirth.ToString("dd / MM / yyyy")</p>
+                    </div>
+                </div>
+                <div class="row mt-20">
+                    <div class="col-4">
+                        <p><i class="fas fa-home"></i> @Model.user.Address</p>
+                    </div>
+                    <div class="col-4 text--center">
+                        <p><i class="fas fa-phone-alt"></i> @Model.user.Phone</p>
+                    </div>
+                    <div class="col-4 btn-disconnect">
+                        <a asp-controller="Security" asp-action="Logout">Se déconnecter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="list-castings-profile">
+                        <h2>Mes castings</h2>
+                        <div class="castings">
+                            @foreach (var casting in @Model.castings)
+                            {
+                                <div class="casting">
+                                    <h4>@casting.Wording</h4>
+                                    <p>@casting.DescriptionPost</p>
+                                    <div class="casting-links">
+                                        <a asp-controller="Casting" asp-action="Remove" asp-route-id="@casting.Id" class="link-del"><i class="fas fa-trash"></i></a>
+                                        <a asp-controller="Casting" asp-action="Details" asp-route-id="@casting.Id" class="link-see"><i class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h2>Mes actions</h2>
+                    <div class="action">
+                        <h3>Ajouter un casting</h3>
+                        <a asp-controller="Casting" asp-action="Add" class="dark-link">Ajouter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

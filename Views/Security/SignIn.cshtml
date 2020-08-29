@@ -1,0 +1,33 @@
+﻿@model Trululu.web.ViewModels.SignInViewModel
+
+@section title {
+    Connexion
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/styles/security.css"/>
+}
+
+<main>
+    <div class="box-form">
+        <h2>Connexion</h2>
+        <form asp-action="SignIn">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>           
+            <div class="box-icon-input box-top">
+                <div class="icon-input"><i class="far fa-user"></i></div>
+                <input asp-for="Mail" placeholder="Adresse Email" type="email"/>
+            </div>
+            <span asp-validation-for="Mail" class="text-danger"></span>
+            <div class="box-icon-input">
+                <div class="icon-input"><i class="fas fa-lock"></i></div>
+                <input asp-for="Password" placeholder="Mot de passe" type="password"/>
+            </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            <div class="form-submit">
+                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                <input type="submit" value="Se connecter" class="btn btn-primary" />
+            </div>
+        </form>
+        <p class="small">Vous n'avez pas de compte, <a class="link-in-text" asp-controller="Security" asp-action="SignUp">inscivez-vous ici !</a></p>
+    </div>
+</main>

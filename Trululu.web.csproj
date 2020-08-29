@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191118094044_initialCreate.cs" />
+    <Compile Remove="Migrations\20191118094044_initialCreate.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ActionResults\" />
+    <Folder Include="Filters\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="wwwroot\styles\" />
+    <Folder Include="Areas\Identity\Pages\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\contact.css" />
+    <Content Remove="wwwroot\css\home.css" />
+    <Content Remove="Views\Casting\Casting.cshtml" />
+  </ItemGroup>
+</Project>

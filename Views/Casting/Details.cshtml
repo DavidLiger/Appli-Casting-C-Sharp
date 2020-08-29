@@ -1,0 +1,30 @@
+﻿@model Trululu.web.Entities.Casting
+
+@section title {
+    @Model.Wording
+}
+
+<main>
+    <div class="container">
+        <div class="content-profile">
+            <div class="header-profile">
+                <div class="row">
+                    <div class="col-4">
+                        <p><i class="fas fa-tag"></i> @Model.Wording</p>
+                    </div>
+                    <div class="col-4 text--center">
+                        <p>Âge <i class="fas fa-minus"></i> : @Model.AgeMin</p>
+                    </div>
+                    <div class="col-4 text--right">
+                        <p>Âge <i class="fas fa-plus"></i> : @Model.AgeMax</p>
+                    </div>
+                </div>
+            </div>
+            <h3>@Model.Wording</h3>
+            <h4><i class="fas fa-user"></i> Profil</h4>
+            <p>@Model.DescriptionProfile</p>
+            <h4><i class="fas fa-briefcase"></i> Poste</h4>
+            <p>@Model.DescriptionProfile</p>
+        </div>
+    </div>
+</main>

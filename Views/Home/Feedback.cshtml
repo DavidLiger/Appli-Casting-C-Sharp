@@ -1,0 +1,40 @@
+﻿@model Trululu.web.ViewModels.FeedbackViewModel
+
+@section title {
+    Contact
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/styles/feedback.css" />
+}
+
+<main>
+    <div class="box-form">
+        <h2>Contact</h2>
+        <form asp-action="Feedback">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="box-icon-input box-top">
+                <div class="icon-input"><i class="far fa-user"></i></div>
+                <input asp-for="Name" placeholder="Nom" />
+            </div>
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <div class="box-icon-input box-top">
+                <div class="icon-input"><i class="far fa-user"></i></div>
+                <input asp-for="Email" placeholder="Adresse Mail" />
+            </div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <div class="box-icon-input box-top">
+                <div class="icon-input"><i class="far fa-user"></i></div>
+                <input asp-for="Subject" placeholder="Objet" />
+            </div>
+            <span asp-validation-for="Subject" class="text-danger"></span>
+            <div class="box-large-box box-top">
+                <textarea asp-for="Message" class="message form-control" placeholder="Votre message..."></textarea>
+            </div>
+            <div class="form-submit">
+                <input type="submit" value="Envoyer" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</main>
+
